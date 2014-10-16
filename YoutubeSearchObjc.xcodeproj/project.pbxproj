@@ -14,6 +14,8 @@
 		A59C09FF19EF64F00061DCF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59C09FE19EF64F00061DCF5 /* Images.xcassets */; };
 		A59C0A0219EF64F00061DCF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59C0A0019EF64F00061DCF5 /* LaunchScreen.xib */; };
 		A59C0A0E19EF64F00061DCF5 /* YoutubeSearchObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59C0A0D19EF64F00061DCF5 /* YoutubeSearchObjcTests.m */; };
+		A59C0A1919EF70080061DCF5 /* YoutubeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A59C0A1819EF70080061DCF5 /* YoutubeClient.m */; };
+		A59C0A2019EF70FA0061DCF5 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A59C0A1F19EF70FA0061DCF5 /* ViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		A59C0A0719EF64F00061DCF5 /* YoutubeSearchObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeSearchObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59C0A0C19EF64F00061DCF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59C0A0D19EF64F00061DCF5 /* YoutubeSearchObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoutubeSearchObjcTests.m; sourceTree = "<group>"; };
+		A59C0A1719EF70080061DCF5 /* YoutubeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeClient.h; sourceTree = "<group>"; };
+		A59C0A1819EF70080061DCF5 /* YoutubeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeClient.m; sourceTree = "<group>"; };
+		A59C0A1E19EF70FA0061DCF5 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		A59C0A1F19EF70FA0061DCF5 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +91,11 @@
 				A59C09F619EF64F00061DCF5 /* AppDelegate.m */,
 				A59C09F819EF64F00061DCF5 /* ViewController.h */,
 				A59C09F919EF64F00061DCF5 /* ViewController.m */,
+				A59C0A1E19EF70FA0061DCF5 /* ViewModel.h */,
+				A59C0A1F19EF70FA0061DCF5 /* ViewModel.m */,
 				A59C09FB19EF64F00061DCF5 /* Main.storyboard */,
+				A59C0A1719EF70080061DCF5 /* YoutubeClient.h */,
+				A59C0A1819EF70080061DCF5 /* YoutubeClient.m */,
 				A59C09FE19EF64F00061DCF5 /* Images.xcassets */,
 				A59C0A0019EF64F00061DCF5 /* LaunchScreen.xib */,
 				A59C09F119EF64F00061DCF5 /* Supporting Files */,
@@ -221,6 +231,8 @@
 			files = (
 				A59C09FA19EF64F00061DCF5 /* ViewController.m in Sources */,
 				A59C09F719EF64F00061DCF5 /* AppDelegate.m in Sources */,
+				A59C0A2019EF70FA0061DCF5 /* ViewModel.m in Sources */,
+				A59C0A1919EF70080061DCF5 /* YoutubeClient.m in Sources */,
 				A59C09F419EF64F00061DCF5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

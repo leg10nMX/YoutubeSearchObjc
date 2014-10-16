@@ -1,15 +1,17 @@
 //
-//  ViewController.h
+//  ViewModel.m
 //  YoutubeSearchObjc
 //
 //  Created by Emanuel Peña Aguilar on 15/10/14.
 //  Copyright (c) 2014 Macrominds. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewModel.h"
 
-@interface ViewController : UITableViewController
-
-
+@interface ViewModel ()
+@property (strong,nonatomic)NSArray *items;
 @end
 
+@implementation ViewModel
+
+@end

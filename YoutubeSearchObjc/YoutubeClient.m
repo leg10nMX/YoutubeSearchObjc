@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  YoutubeClient.m
 //  YoutubeSearchObjc
 //
 //  Created by Emanuel Peña Aguilar on 15/10/14.
 //  Copyright (c) 2014 Macrominds. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "YoutubeClient.h"
 
-@interface ViewController : UITableViewController
-
+@implementation YoutubeClient
 
 @end
-
