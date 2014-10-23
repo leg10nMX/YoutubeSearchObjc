@@ -9,8 +9,8 @@
 #import "YoutubeClient.h"
 #import "SearchItem.h"
 
-#warning remove
-NSString * const YoutubeClientAPIKey = @"AIzaSyAZ2S1DrOGjgra13vIQKCaYwlxxZH2t-uw";
+#warning inserta tu propia Key
+NSString * const YoutubeClientAPIKey = @"Youtube_API_KEY";
 NSString * const YoutubeClientItemsKey = @"items";
 
 @implementation YoutubeClient {
