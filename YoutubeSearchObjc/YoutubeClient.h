@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface YoutubeClient : NSObject
-
+- (void)searchWithQuery:(NSString*)query success:(void (^)(NSArray* results))successBlock failure:(void (^)(NSError *error))failureBlock;
 @end
