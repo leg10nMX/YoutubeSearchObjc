@@ -7,12 +7,24 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
+#import "ViewModel.h"
+@interface ViewController () <ViewModelDelegate>
+@property (strong,nonatomic) ViewModel *model;
 @end
 
 @implementation ViewController
+
+- (ViewModel*)model {
+  if (_model == nil) {
+    _model = [[ViewModel alloc] init];
+    _model.delegate = self;
+  }
+  return _model;
+}
+
+- (void)searchResultsDidChange {
+  
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];

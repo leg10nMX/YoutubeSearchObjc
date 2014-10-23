@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SearchItem.h"
+@protocol ViewModelDelegate <NSObject>
+- (void)searchResultsDidChange;
+@end
 
 @interface ViewModel : NSObject
-
+@property (weak,nonatomic)id<ViewModelDelegate> delegate;
 @end
