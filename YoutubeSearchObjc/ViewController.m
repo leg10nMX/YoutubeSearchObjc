@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "ViewModel.h"
-@interface ViewController () <ViewModelDelegate>
+#import "SearchItem.h"
+@interface ViewController () <ViewModelDelegate,UISearchBarDelegate>
 @property (strong,nonatomic) ViewModel *model;
 @end
+
+NSString * const UITableViewCellReuseIdentifier = @"ViewController.Cell";
 
 @implementation ViewController
 
@@ -32,6 +35,30 @@
   UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.description preferredStyle:UIAlertControllerStyleAlert];
   [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
   [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+  self.model.query = searchBar.text;
+  [searchBar resignFirstResponder];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [self.model itemCount];
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UITableViewCellReuseIdentifier];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:UITableViewCellReuseIdentifier];
+  }
+  SearchItem *item = [self.model itemAtIndex:[indexPath row]];
+  cell.textLabel.text = item.title;
+  cell.detailTextLabel.text = item.videoDescription;
+  return cell;
 }
 
 - (void)viewDidLoad {

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SearchItem.h"
+@class SearchItem;
 @protocol ViewModelDelegate <NSObject>
 - (void)searchResultsDidChange;
 - (void)searchDidFailWithError:(NSError*)error;
@@ -15,4 +16,8 @@
 
 @interface ViewModel : NSObject
 @property (weak,nonatomic)id<ViewModelDelegate> delegate;
+@property (strong,nonatomic)NSString *query;
+
+- (NSInteger)itemCount;
+- (SearchItem*)itemAtIndex:(NSInteger)index;
 @end
