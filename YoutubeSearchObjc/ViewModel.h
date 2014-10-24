@@ -10,6 +10,7 @@
 #import "SearchItem.h"
 @protocol ViewModelDelegate <NSObject>
 - (void)searchResultsDidChange;
+- (void)searchDidFailWithError:(NSError*)error;
 @end
 
 @interface ViewModel : NSObject
